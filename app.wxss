@@ -8,3 +8,80 @@
   padding: 0;
   box-sizing: border-box;
 } 
+
+.btn {
+  width: 90%;
+  margin-top: 30rpx;
+  background-color: rgba(0, 255, 170, 0.5);
+  color: #FFF;
+}
+
+.img{
+  width: 80%;
+  margin-top: 60rpx;
+  left: 0rpx;
+  right: 20rpx;
+}
+
+.contain{
+  background: rgb(255, 255, 255);
+}
+
+.title{
+  text-align: left;
+  font-size:16px;
+}
+
+.star{
+  top:460rpx;
+  left: 560rpx;
+}
+
+.mark{
+  position: absolute;
+  top:268rpx;
+  left:560rpx;
+}
+
+.star-image {
+  position: absolute;
+  width: 80rpx;
+  height: 80rpx;
+  src: "../../images/1.png";
+}
+ 
+ 
+.item {
+  position: absolute;
+  top: 25rpx;
+  width: 40rpx;
+  height: 80rpx;
+}
+
+.input{
+  margin: 40rpx;
+  margin-top:170rpx;
+  height: 350rpx;
+  border: 1px solid rgb(245,245,245);
+  border-radius: 10rpx;
+  background: rgb(245,245,245);
+  font-size:14px;
+  color:black;
+}
+.ph{
+  color:#aaa;
+  font-weight:300;
+}
+.btn{
+  margin: 40rpx;
+  font-weight: 500;
+}
+.btn button{
+  color: white;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #3c3;
+}
+
+
+

@@ -1,6 +1,47 @@
 <!--index.wxml-->
 <view class="container">
-    <view class="list">
-        <button type="primary" class="button" bindtap="simpleUpload">简单上传</button>
+
+<button type="primary" class="upload-img-btn" class="btn" bindtap="uploadFile">上传</button>
+<button type="primary" class="btn" bindtap="viewImg">查看图片</button>
+
+
+<view class="img" wx:for="{{list}}" wx:for-item="item" wx:key="*this" wx:for-index="index1">
+    <image class="img" src="{{item}}" mode="widthFix" bindtap="previewImg" bindlongpress="deleteImg"></image>
+
+    <view class="title"><text>评价该课程 得{{scores[index1]}}分</text></view>
+    
+    <view class="star" wx:for="{{playStarts[index1]}}">
+            <image class="star-image" style="left: {{item*80}}rpx" src="{{scores[index1] > item ? (scores[index1] - item == 0.5 ? halfSrc : selectedSrc) : normalSrc}}" >
+ 
+              <view class="item" id="{{index}}" data-index="{{index1}}" style="left:0rpx" data-key="{{item+0.5}}" bindtap="selectLeft"></view>
+ 
+              <view class="item" id="{{index}}" data-index="{{index1}}" style="left:40rpx" data-key="{{item+1}}" bindtap="selectRight"></view>
+            </image>
     </view>
+</view>
+
+
+
+<!-- <view class="title"><text>评价该课程  得{{key}}分</text></view>
+<view class="star">
+<block wx:for="{{stars}}">
+  <image class="star-image" style="left: {{item*80}}rpx" src="{{key > item ?(key-item == 0.5?halfSrc:selectedSrc) : normalSrc}}">
+ 
+    <view class="item" style="left:0rpx" data-key="{{item+0.5}}" bindtap="selectLeft"></view>
+ 
+    <view class="item" style="left:40rpx" data-key="{{item+1}}" bindtap="selectRight"></view>
+  </image>
+ 
+</block>
+</view> -->
+
+<!-- <view class="input">
+<input placeholder-class='ph' placeholder="请输入您要评价的内容"></input>
+</view>
+<view class='btn'>
+<button bindtap='tijiao' type='text'>提交</button>
+</view> -->
+
+
+
 </view>
